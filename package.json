@@ -1,0 +1,30 @@
+{
+  "name": "anylocale",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "auto translate string to any lang",
+  "exports": {
+    "require": "./dist/typeany.cjs",
+    "default": "./dist/typeany.modern.js"
+  },
+  "source": "src/index.js",
+  "main": "./dist/typeany.cjs",
+  "module": "./dist/typeany.module.js",
+  "unpkg": "./dist/typeany.umd.js",
+  "scripts": {
+    "build": "microbundle --external none",
+    "dev": "microbundle watch",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.21.5",
+    "babel-jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "microbundle": "^0.15.1"
+  },
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}

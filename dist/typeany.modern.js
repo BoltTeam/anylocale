@@ -1,0 +1,2 @@
+const o=function({token:o}){return{callHook:async e=>(await fetch("localhost:4000/hooks",{method:"POST",mode:"cors",cache:"no-cache",headers:{token:o},body:JSON.stringify({name:"locale",data:{lang:"en",text:e}})})).json(),lang:"en"}}({token:"1234"}),e=e=>{o.lang=e},n=(e,...n)=>{const t=e.reduce((o,e,t)=>o+e+(void 0!==n[t]?n[t]:""),"");return o.callHook(t).then(o=>{console.log(o)}).then(o=>{console.log([o])}),t};export{n as AnyLocale,e as setLang};
+//# sourceMappingURL=typeany.modern.js.map
